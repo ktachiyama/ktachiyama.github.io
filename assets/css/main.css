@@ -1657,6 +1657,13 @@ header > p {
 
 /* Image */
 
+.my-vids {
+  position: relative;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .image {
   display: inline-block;
 }
@@ -1666,10 +1673,21 @@ header > p {
   width: 100%;
 }
 
-.image.fit {
+.image.fit,
+.project.img {
   display: block;
   width: 100%;
+  transition: transform 0.25s ease;
 }
+
+.project.img {
+  box-shadow: 3px 10px 20px #888888;
+}
+
+/* .image.fit > img:hover {
+  -webkit-transform: scale(2); 
+  transform: scale(2);
+} */
 
 .image.featured {
   display: block;
@@ -1985,6 +2003,16 @@ ul.actions li:first-child {
   opacity: 1;
 }
 
+#nav a.icon.brands.fa-github:hover {
+  opacity: 1;
+  color: black;
+}
+
+#nav a.icon.brands.fa-linkedin:hover {
+  opacity: 1;
+  color: blue;
+}
+
 #nav a.active:after,
 #nav-header a.active:after {
   border-bottom-width: 0.5em;
@@ -2081,6 +2109,16 @@ body.is-preload #wrapper {
   position: relative;
   padding: 3.5em 2.5em 2.5em 2.5em;
   width: 100%;
+}
+
+#main > .panel section .row {
+  position: relative;
+  padding-bottom: 3vw;
+}
+
+#main > .panel section p {
+  margin: auto;
+  padding-bottom: 1vw;
 }
 
 #main > .panel.inactive {
